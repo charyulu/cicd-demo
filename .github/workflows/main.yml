@@ -20,8 +20,8 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           IMAGE_NAME: cicd-demo
         run: |
-          docker build -t cicd-demo/$IMAGE_NAME .
-          docker push cicd-demo/$IMAGE_NAME:latest
+          docker build -t charyulu/$IMAGE_NAME .
+          docker push charyulu/$IMAGE_NAME:latest
 
   test:
     runs-on: ubuntu-latest
