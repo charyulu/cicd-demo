@@ -18,10 +18,10 @@ jobs:
       - name: Build, tag, and push image to DockerHub
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          IMAGE_NAME: my-image
+          IMAGE_NAME: cicd-demo
         run: |
-          docker build -t charyulu/cicd-demo/$IMAGE_NAME .
-          docker push charyulu/cicd-demo/$IMAGE_NAME:latest
+          docker build -t cicd-demo/$IMAGE_NAME .
+          docker push cicd-demo/$IMAGE_NAME:latest
 
   test:
     runs-on: ubuntu-latest
